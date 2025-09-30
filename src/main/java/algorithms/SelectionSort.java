@@ -7,7 +7,6 @@ public class SelectionSort {
 
     public SelectionSort() {}
 
-    // Make API consistent: accept input array and sort it in-place
     public void sort(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return;
@@ -15,36 +14,25 @@ public class SelectionSort {
         resetMetrics();
         for (int i = 0; i < arr.length - 1; i++) {
             int minIndex = i;
-
             for (int j = i + 1; j < arr.length; j++) {
                 comparisons++;
-                arrayAccesses += 2; // read arr[j] and arr[minIndex] for comparison
+                arrayAccesses += 2;
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
             }
-
             if (minIndex != i) {
                 int temp = arr[i];
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
-                arrayAccesses += 4; // two reads and two writes approximated
+                arrayAccesses += 4;
                 swaps++;
             }
         }
     }
-    public long getComparisons() {
-        return comparisons;
-    }
-    public long getSwaps() {
-        return swaps;
-    }
-    public long getArrayAccesses() {
-        return arrayAccesses;
-    }
-    public void resetMetrics() {
-        comparisons = 0;
-        swaps = 0;
-        arrayAccesses = 0;
-    }
+
+    public long getComparisons() { return comparisons; }
+    public long getSwaps() { return swaps; }
+    public long getArrayAccesses() { return arrayAccesses; }
+    public void resetMetrics() { comparisons = swaps = arrayAccesses = 0; }
 }
