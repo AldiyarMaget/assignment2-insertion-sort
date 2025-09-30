@@ -1,0 +1,7 @@
+size,type,mode,rep,comparisons,shifts,arrayAccesses,allocations,timeMs
+250,random,standard,1,31250,31250,62500,0,0
+500,random,standard,1,125000,125000,250000,0,2
+1000,random,standard,1,500000,500000,1000000,0,10
+2000,random,standard,1,2000000,2000000,4000000,0,40
+4000,random,standard,1,8000000,8000000,16000000,0,160
+8000,random,standard,1,32000000,32000000,64000000,0,640
