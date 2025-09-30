@@ -52,6 +52,17 @@ public class PerformanceTracker {
                             size, distribution, (endTime - startTime),
                             insertionSort.getComparisons(), insertionSort.getSwaps(),
                             insertionSort.getArrayAccesses()));
+
+                    arrCopy = arr.clone();
+                    SelectionSort selectionSort = new SelectionSort();
+                    startTime = System.nanoTime();
+                    selectionSort.sort(arrCopy);
+                    endTime = System.nanoTime();
+
+                    writer.write(String.format("SelectionSort,%d,%s,%d,%d,%d,%d\n",
+                            size, distribution, (endTime - startTime),
+                            selectionSort.getComparisons(), selectionSort.getSwaps(),
+                            selectionSort.getArrayAccesses()));
                 }
             }
         }

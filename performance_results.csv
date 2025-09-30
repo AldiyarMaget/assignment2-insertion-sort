@@ -1,0 +1,10 @@
+Algorithm,ArraySize,Distribution,Time(ns),Comparisons,Swaps,ArrayAccesses
+"InsertionSort,100,random,164200,2545,2547,5191\nSelectionSort,100,random,175900,4950,96,10284
+"InsertionSort,100,sorted,10700,99,99,297\nSelectionSort,100,sorted,211600,4950,0,9900
+"InsertionSort,100,reverse_sorted,293100,4950,5049,10098\nSelectionSort,100,reverse_sorted,206100,4950,50,10100
+"InsertionSort,1000,random,5203200,251043,251047,503089\nSelectionSort,1000,random,4290400,499500,995,1002980
+"InsertionSort,1000,sorted,13300,999,999,2997\nSelectionSort,1000,sorted,1666000,499500,0,999000
+"InsertionSort,1000,reverse_sorted,10364800,499500,500499,1000998\nSelectionSort,1000,reverse_sorted,10920500,499500,500,1001000
+"InsertionSort,10000,random,81727500,24917684,24917698,49845381\nSelectionSort,10000,random,65588400,49995000,9990,100029960
+"InsertionSort,10000,sorted,35900,9999,9999,29997\nSelectionSort,10000,sorted,52599500,49995000,0,99990000
+"InsertionSort,10000,reverse_sorted,80068600,49995000,50004999,100009998\nSelectionSort,10000,reverse_sorted,65429200,49995000,5000,100010000
