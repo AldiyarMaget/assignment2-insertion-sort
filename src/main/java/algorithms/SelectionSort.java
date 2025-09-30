@@ -5,7 +5,10 @@ public class SelectionSort {
     private long swaps = 0;
     private long arrayAccesses = 0;
 
-    public void sort() {
+    public SelectionSort() {}
+
+    // Make API consistent: accept input array and sort it in-place
+    public void sort(int[] arr) {
         if (arr == null || arr.length <= 1) {
             return;
         }
@@ -15,7 +18,7 @@ public class SelectionSort {
 
             for (int j = i + 1; j < arr.length; j++) {
                 comparisons++;
-                arrayAccesses += 2;
+                arrayAccesses += 2; // read arr[j] and arr[minIndex] for comparison
                 if (arr[j] < arr[minIndex]) {
                     minIndex = j;
                 }
@@ -25,7 +28,7 @@ public class SelectionSort {
                 int temp = arr[i];
                 arr[i] = arr[minIndex];
                 arr[minIndex] = temp;
-                arrayAccesses += 4;
+                arrayAccesses += 4; // two reads and two writes approximated
                 swaps++;
             }
         }

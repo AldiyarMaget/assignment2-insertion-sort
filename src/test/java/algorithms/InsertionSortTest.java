@@ -17,7 +17,7 @@ public class InsertionSortTest {
         int[] arr = {};
         sorter.sort(arr);
         assertArrayEquals(new int[]{}, arr);
-        assertEquals(0, sorter.getComparisons));
+        assertEquals(0, sorter.getComparisons);
 
     }
     @Test
